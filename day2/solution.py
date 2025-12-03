@@ -8,13 +8,9 @@ def find_invalid_ids(ids):
         total += id
   return total
 
-def test(testcase, answer):
-  output = find_invalid_ids(testcase)
-  print(f"Output: {output}\t Expected: {answer}")
-
 def get(filename):  
   with open(filename, 'r') as f:
     return f.read().split(',')
 
-test(get('test'), 0)
+print(find_invalid_ids(get('test')))
 print(find_invalid_ids(get('input')))
